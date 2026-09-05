@@ -9,19 +9,27 @@ The system utilizes a Convolutional Neural Network (CNN), which excels at extrac
 
 •	Conv1D Layer (64 filters, kernel size 5, ReLU activation)
 Extracts local patterns from the MFCC input, such as short-term frequency changes in speech.
+
 •	Batch Normalization
 Normalizes the output of the previous layer to stabilize learning and speed up training.
+
 •	MaxPooling1D (pool size 2)
 Reduces the size of the feature map, helping the model focus on the most important information while lowering computation.
+
 •	Dropout (rate 0.3)
 Randomly drops some neurons during training to reduce overfitting and improve generalization.
+
 •	Conv1D Layer (128 filters, kernel size 5, ReLU activation)
 Learns deeper and more abstract features that represent complex emotional patterns in speech.
+
 •	Flatten Layer
 Converts the 2D feature map into a 1D vector so it can be passed to fully connected layers.
+
 •	Dense Layer (128 units, ReLU activation)
 Acts as a fully connected layer that combines learned features and prepares them for classification.
+
 •	Dropout (rate 0.4)
 Provides additional regularization to prevent the model from memorizing the training data.
+
 •	Dense Output Layer (Softmax activation)
 Produces the final probability distribution across emotion classes, enabling multi-class emotion classification.
